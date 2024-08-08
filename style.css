@@ -1,0 +1,139 @@
+:root {
+  --clr-green: hsl(75, 94%, 57%);
+  --clr-white:  hsl(0, 0%, 100%);
+  --clr-grey-700: hsl(0, 0%, 20%);
+  --clr-grey-800: hsl(0, 0%, 12%);
+  --clr-grey-900: hsl(0, 0%, 8%);
+
+  --ff-prim: "Inter Tight", sans-serif;
+  --ff-body: var(--ff-prim);
+  --ff-heading: var(--ff-prim);
+    
+  --fw-regular: 400;
+  --fw-semi: 600;
+  --fw-bold: 700;
+
+  --fs-xs: .875rem;
+  --fs-s: 1rem;
+  --fs-l: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-style: initial;
+  font-size: 16px;
+}
+
+
+body {
+  font-family: var(--ff-prim);
+  box-sizing: border-box;
+}
+ul, li {list-style: none;}
+a {
+  text-decoration: none;
+
+}
+
+/* utilities */ 
+
+/* text presets */
+
+/* first we wanna make presets for text so its more easy 
+to put them as classes in html and less css struggle */ 
+
+.preset-1 {
+  font-size: var(--fs-l);
+  font-weight: var(--fw-semi);
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+.preset-2 {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-regular);
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+.preset-3 {
+  font-size: var(--fs-s);
+  font-weight: var(--fw-bold);
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+/* text color */
+
+.text-white {color: var(--clr-white);}
+.text-green {color: var(--clr-green);}
+
+/* background colors */
+
+.darker-grey {background: var(--clr-grey-900);}
+.dark-grey {background: var(--clr-grey-800);}
+.light-grey {background: var(--clr-grey-700);}
+
+
+/* location and position main card and body */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.main-card {
+  width: 304px;
+  height: 531px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  height: 88px;
+  width: 88px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.name {
+  margin-bottom: 4px;
+}
+
+.location {
+  margin-bottom: 24px;
+}
+
+.description {
+  margin-bottom: 24px;
+}
+
+
+li {
+  width: 280px;
+  height: 21px;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  color: white;
+  transition: scale 190ms linear 10ms,
+              background-color 390ms linear 0ms,
+              color 190ms linear 10ms;
+}
+
+li:hover {
+  scale: 1.1;
+  background-color: var(--clr-green);
+  color: black;
+  cursor: pointer;
+}
